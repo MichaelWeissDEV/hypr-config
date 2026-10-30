@@ -1,0 +1,17 @@
+[Desktop Entry]
+Type=Application
+Name=Screenshot (Snipping Tool)
+Name[de]=Screenshot (Ausschneiden)
+Comment=Select, annotate, save and copy a screenshot
+Comment[de]=Bildschirmbereich auswählen, bearbeiten, speichern und kopieren
+Exec=screenshot region
+Icon=camera-photo
+Terminal=false
+Categories=Graphics;
+Keywords=screenshot;snipping;capture;satty;
+Actions=Full;
+
+[Desktop Action Full]
+Name=Capture all screens
+Name[de]=Alle Bildschirme aufnehmen
+Exec=screenshot full

@@ -1,0 +1,4 @@
+monitors.local.lua
+*.log
+*.bak
+*~

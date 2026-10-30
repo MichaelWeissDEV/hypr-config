@@ -1,0 +1,20 @@
+-- Vorlage für individuelle Monitor-Regeln.
+-- Nach monitors.local.lua kopieren; nur diese lokale Datei bearbeiten (Git-ignoriert).
+-- Anschlüsse und Modi: hyprctl monitors all
+-- Anwenden nach Änderungen: hyprctl reload
+-- Ohne lokale Datei gilt weiterhin die automatische Monitor-Erkennung.
+
+-- Beispiel: Zwei Monitore nebeneinander, beide mit Skalierung 1.
+-- Anschlussnamen, Auflösung, Bildwiederholrate und Position anpassen.
+-- hl.monitor({
+--     output   = "DP-1",
+--     mode     = "1920x1080@60",
+--     position = "0x0",
+--     scale    = 1.0,
+-- })
+-- hl.monitor({
+--     output   = "HDMI-A-1",
+--     mode     = "1920x1080@60",
+--     position = "1920x0",
+--     scale    = 1.0,
+-- })

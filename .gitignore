@@ -2,3 +2,4 @@ monitors.local.lua
 *.log
 *.bak
 *~
+__pycache__/

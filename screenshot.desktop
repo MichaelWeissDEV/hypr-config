@@ -9,7 +9,17 @@ Icon=camera-photo
 Terminal=false
 Categories=Graphics;
 Keywords=screenshot;snipping;capture;satty;
-Actions=Full;
+Actions=Window;Monitor;Full;
+
+[Desktop Action Window]
+Name=Capture active window
+Name[de]=Aktives Fenster aufnehmen
+Exec=screenshot window
+
+[Desktop Action Monitor]
+Name=Capture active screen
+Name[de]=Aktiven Bildschirm aufnehmen
+Exec=screenshot monitor
 
 [Desktop Action Full]
 Name=Capture all screens

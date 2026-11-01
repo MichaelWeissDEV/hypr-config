@@ -2,7 +2,8 @@
 -- Nach monitors.local.lua kopieren; nur diese lokale Datei bearbeiten (Git-ignoriert).
 -- Anschlüsse und Modi: hyprctl monitors all
 -- Anwenden nach Änderungen: hyprctl reload
--- Ohne lokale Datei gilt weiterhin die automatische Monitor-Erkennung.
+-- Ohne lokale Regel werden neue Monitore automatisch rechts daneben angeordnet
+-- (bevorzugter Modus, Skalierung 1); lokale Regeln haben weiterhin Vorrang.
 
 -- Beispiel: Zwei Monitore nebeneinander, beide mit Skalierung 1.
 -- Anschlussnamen, Auflösung, Bildwiederholrate und Position anpassen.

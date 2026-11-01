@@ -13,15 +13,15 @@ local config_home = os.getenv("XDG_CONFIG_HOME") or (home .. "/.config")
 hl.monitor({
     output   = "eDP-1",
     mode     = "preferred",
-    position = "auto",
+    position = "auto-right",
     scale    = 1.0,
 })
 
--- Alle weiteren angeschlossenen Bildschirme automatisch erkennen und platzieren
+-- Weitere Bildschirme automatisch rechts neben den vorhandenen anordnen.
 hl.monitor({
     output   = "",
     mode     = "preferred",
-    position = "auto",
+    position = "auto-right",
     scale    = 1.0,
 })
 
@@ -613,6 +613,8 @@ hl.bind(mainMod .. " + mouse:273", hl.dsp.window.resize(), { mouse = true })
 hl.bind("Print",                   hl.dsp.exec_cmd(screenshot .. " region"))
 hl.bind(mainMod .. " + SHIFT + P", hl.dsp.exec_cmd(screenshot .. " region"))
 hl.bind(mainMod .. " + Print",     hl.dsp.exec_cmd(screenshot .. " full"))
+hl.bind("ALT + Print",             hl.dsp.exec_cmd(screenshot .. " window"))
+hl.bind("SHIFT + Print",           hl.dsp.exec_cmd(screenshot .. " monitor"))
 
 -- Multimedia & Helligkeit (Laptop-Funktionstasten)
 hl.bind("XF86AudioRaiseVolume",  hl.dsp.exec_cmd("wpctl set-volume -l 1.0 @DEFAULT_AUDIO_SINK@ 5%+"), { locked = true, repeating = true })
@@ -626,6 +628,13 @@ hl.bind("XF86MonBrightnessDown", hl.dsp.exec_cmd("brightnessctl -e4 -n2 set 5%-"
 --------------------------------
 ---- WINDOWS AND WORKSPACES ----
 --------------------------------
+hl.window_rule({
+    name  = "screenshot-editor",
+    match = { class = "^(com\\.gabm\\.satty|org\\.satty\\.satty)$" },
+    float = true,
+    center = true,
+})
+
 hl.window_rule({
     name  = "suppress-maximize-events",
     match = { class = ".*" },

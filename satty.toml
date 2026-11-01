@@ -1,0 +1,19 @@
+# Wird von screenshot.sh explizit geladen; unabhängig von anderen Satty-Profilen.
+[general]
+initial-tool = "arrow"
+copy-command = "wl-copy --type image/png"
+save-after-copy = true
+early-exit = ["all"]
+actions-on-enter = ["save-to-clipboard"]
+actions-on-escape = ["exit"]
+corner-roundness = 0
+default-hide-toolbars = false
+no-window-decoration = true
+
+[font]
+family = "sans-serif"
+style = "Regular"
+
+# Catppuccin Mocha, passend zum Desktop. Zahlen 1–8 wählen die Farbe.
+[color-palette]
+palette = ["#f38ba8", "#fab387", "#f9e2af", "#a6e3a1", "#94e2d5", "#89b4fa", "#cba6f7", "#cdd6f4"]
